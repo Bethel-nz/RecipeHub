@@ -83,6 +83,9 @@ const Wrapper = styled.div`
 			margin-top: 1rem;
 		}
 	}
+	@media (max-width: 420px) {
+		width: 16em;
+	}
 `;
 
 const Button = styled.button`

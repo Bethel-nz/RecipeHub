@@ -36,7 +36,7 @@ const About = () => {
 	return (
 		<AboutContainer>
 			<Title>About RecipeHub</Title>
-			<Subtitle>A Practice Project in Web Development</Subtitle>
+			<Subtitle>A Web Development Projecct</Subtitle>
 			<Text>
 				Recipe App is a web application developed as a practice project to
 				enhance skills in web development. It showcases the utilization of

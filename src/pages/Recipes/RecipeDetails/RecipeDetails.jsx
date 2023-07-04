@@ -39,7 +39,7 @@ const RecipeDetails = () => {
 							<p>Preparation Time:</p>
 							<span>
 								{data?.preparationMinutes === -1 ? (
-									'Unspecified time'
+									'Cook till perfection'
 								) : (
 									<span>{data?.preparationMinutes + ' ' + 'Minutes'}</span>
 								)}
@@ -88,6 +88,12 @@ export default RecipeDetails;
 
 const Wrapper = styled.div`
 	/* border: 1px solid #9996967d; */
+	@media (max-width: 420px) {
+		img {
+			max-width: 100%;
+			width: 17em;
+		}
+	}
 	color: #333333e2;
 	height: 100vh;
 	padding: 1.5em;
@@ -136,8 +142,6 @@ const Wrapper = styled.div`
 		margin-bottom: 2em;
 		h2 {
 			margin: auto;
-			text-decoration: underline;
-			text-underline-offset: 5px;
 		}
 		button {
 			outline: transparent;
@@ -197,13 +201,18 @@ const Wrapper = styled.div`
 		}
 	}
 	.similar {
-		margin: 2.5em;
-		padding: 2em;
+		margin: 1.5em;
 		height: 24em;
+		padding: 0.5em;
 		box-shadow: 0px 0px 10px 1px rgba(17, 17, 26, 0.18);
 		border-radius: 0.5em;
 		p {
 			padding: 0.5em;
+		}
+		@media (max-width: 420px) {
+			p {
+				text-align: center;
+			}
 		}
 	}
 	@media (max-width: 1280px) {
