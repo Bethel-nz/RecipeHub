@@ -12,8 +12,6 @@ const Home = () => {
 				<div className='hero'>
 					<Hero />
 				</div>
-				
-				
 			</HomeWrapper>
 		</>
 	);

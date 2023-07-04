@@ -23,6 +23,7 @@ export const HomeWrapper = styled(motion.div)`
 	}
 
 	@media (max-width: 1280px) {
+		padding: 0;
 		.intro {
 			width: 100%;
 		}

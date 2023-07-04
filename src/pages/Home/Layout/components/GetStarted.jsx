@@ -80,7 +80,7 @@ const GSWrapper = styled.div`
 	color: #363636;
 	word-spacing: 1.5;
 	h1 {
-		font-size: clamp(2.5rem, 1.9vw, 3.2rem);
+		font-size: 2.5rem;
 		font-weight: 800;
 		line-height: 1.4;
 		font-family: 'DM Serif Display', serif;
@@ -102,6 +102,7 @@ const GSWrapper = styled.div`
 	@media (max-width: 1280px) {
 		text-align: center;
 		width: 100%;
+		padding: 1em;
 		h1 {
 			width: 100%;
 		}
@@ -111,6 +112,12 @@ const GSWrapper = styled.div`
 			align-items: center;
 			justify-content: center;
 			gap: 1.2em;
+		}
+	}
+	@media (max-width: 420px) {
+		padding: 0.5em;
+		h1 {
+			font-size: 2rem;
 		}
 	}
 `;

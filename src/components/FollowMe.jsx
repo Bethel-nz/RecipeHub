@@ -15,11 +15,11 @@ const FollowMe = () => {
 					<GrTwitter />
 				</a>
 			</div>
-			<ul>
-				<li>
+			<div className='me'>
+				<span>
 					Made with love by <a href='#'>Bethel.nz</a>
-				</li>
-			</ul>
+				</span>
+			</div>
 		</FWrapper>
 	);
 };
@@ -40,27 +40,28 @@ export const FWrapper = styled.div`
 		gap: 0.8em;
 		align-items: center;
 	}
-	ul {
+	.me {
 		padding-inline-end: 3em;
 		margin-left: auto;
 	}
-	li {
+	span {
 		align-items: center;
-		gap: 10px;
+		gap: 5px;
 		display: inline-flex;
-		margin-inline: 1em;
 	}
 	a {
 		color: #333333c3;
+		font-weight: bold;
 	}
 
 	@media (max-width: 1280px) {
 		flex-direction: column;
 		.social,
+		.me,
 		a {
 			margin: auto;
 		}
-		ul {
+		span {
 			margin-left: 0;
 		}
 	}
