@@ -63,7 +63,3 @@ To run RecipeHub locally, follow these steps:
 ## Learning Journey
 
 Developing RecipeHub allowed me to gain hands-on experience in web development. Throughout the project, I encountered and overcame various challenges, including integrating APIs, implementing responsive layouts, and leveraging powerful libraries and frameworks. This project has been a valuable learning experience in building robust web applications.
-
-## Future Development
-
-In the future, I plan to further enhance RecipeHub by adding mini additional features such as recipe share button and daily recommendations. These additions will make the app even more engaging and useful for users.

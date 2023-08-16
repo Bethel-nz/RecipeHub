@@ -4,7 +4,7 @@ import Recipes from './Recipes';
 export default function RecipeLayout() {
 	const location = useLocation();
 	return (
-		<div className='careers-layout'>
+		<div className=''>
 			{location.pathname === '/recipes' && <Recipes />}
 			<Outlet />
 		</div>

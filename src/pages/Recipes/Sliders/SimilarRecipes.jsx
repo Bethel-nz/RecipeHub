@@ -28,9 +28,8 @@ const SimilarRecipes = ({ recipeId }) => {
 					autoplay: true,
 					interval: 5000,
 					rewind: true,
-					gap: 40,
+					gap: 10,
 				}}
-				autoSroll={{}}
 			>
 				{recipes?.map((recipe) => (
 					<SplideSlide key={recipe.id}>
@@ -53,9 +52,9 @@ const SimilarRecipes = ({ recipeId }) => {
 export default SimilarRecipes;
 
 const BWrapper = styled.div`
-	overflow-x: hidden;
+	overflow-x: scroll;
 	display: grid;
 	place-items: center;
-	padding: 0.5em;
+	padding: 0.2em;
 	width: 100%;
 `;

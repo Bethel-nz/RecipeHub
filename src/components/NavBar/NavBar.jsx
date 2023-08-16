@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { HiMenu } from 'react-icons/hi';
+import { GrFormClose, GrMenu } from 'react-icons/gr';
 import { Link, NavLink } from 'react-router-dom';
 import { Nav } from './NavBarStyles';
 const NavBar = () => {
@@ -40,7 +40,7 @@ const NavBar = () => {
 				</li>
 			</ul>
 			<div className='menu' onClick={handleToggle}>
-				<HiMenu size={24} />
+				{toggle ? <GrFormClose size={32} /> : <GrMenu size={24} />}
 			</div>
 		</Nav>
 	);

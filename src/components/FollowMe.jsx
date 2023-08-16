@@ -37,11 +37,10 @@ export const FWrapper = styled.div`
 	.social,
 	a {
 		display: flex;
-		gap: 0.8em;
+		gap: 1em;
 		align-items: center;
 	}
 	.me {
-		padding-inline-end: 3em;
 		margin-left: auto;
 	}
 	span {

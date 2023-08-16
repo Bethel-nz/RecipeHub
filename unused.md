@@ -65,3 +65,88 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 	</React.StrictMode>
 );
 ```
+
+import React, { useState } from 'react';
+
+import { BiSearch } from 'react-icons/bi';
+import { useNavigate } from 'react-router-dom';
+import styled from 'styled-components';
+
+const SearchRecipes = () => {
+const [searchedRecipe, setSearchedRecipe] = useState('');
+const Navigate = useNavigate();
+
+    const handleSearch = (e) => {
+    	e.preventDefault();
+    	Navigate();
+    };
+    return (
+    	<div>
+    		<Wrapper>
+    			<form onSubmit={handleSearch}>
+    				<div className='form'>
+    					<div className='icon'>
+    						<BiSearch size={28} color='#579131' />
+    					</div>
+    					<input
+    						type='text'
+    						placeholder='search for a recipe'
+    						onChange={(e) => setSearchedRecipe(e.target.value)}
+    					/>
+    				</div>
+    			</form>
+    		</Wrapper>
+    	</div>
+    );
+
+};
+
+export default SearchRecipes;
+
+const Wrapper = styled.div`
+display: flex;
+margin: 1rem auto;
+gap: 0.4em;
+border: 2px solid #41323250;
+border-radius: 0.5em;
+width: fit-content;
+
+    .container {
+    	display: flex;
+    	justify-content: center;
+    	align-items: center;
+    }
+
+    .form {
+    	width: 20em;
+    	position: relative;
+    }
+    .form input {
+    	width: 100%;
+    	padding: 0.8em;
+    	padding-left: 2.5em;
+    	outline: transparent;
+    	border: none;
+    	border-radius: 0.5em;
+    	font-size: 1.2em;
+    }
+
+    .form .icon {
+    	position: absolute;
+    	padding-inline: 0.5em;
+    	top: 58%;
+    	transform: translateY(-50%);
+    }
+
+    @media (max-width: 768px) {
+    	flex-wrap: wrap;
+    	justify-content: center;
+    	.container {
+    		margin-top: 1rem;
+    	}
+    }
+    @media (max-width: 420px) {
+    	width: 16em;
+    }
+
+`;

@@ -36,6 +36,7 @@ const GetStarted = () => {
 					initial='hidden'
 					animate='visible'
 					variants={variants}
+					className='text-container'
 				>
 					{textArray.map((word, index) => (
 						<motion.span key={index} variants={item}>
@@ -89,7 +90,12 @@ const GSWrapper = styled.div`
 		display: inline-block;
 		margin-inline: 0.19em;
 	}
-
+	.text-container {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.2em;
+		text-align: center;
+	}
 	a,
 	a:visited {
 		color: inherit;
@@ -112,6 +118,10 @@ const GSWrapper = styled.div`
 			align-items: center;
 			justify-content: center;
 			gap: 1.2em;
+			margin-top: 1.5em;
+		}
+		.text-container {
+			justify-content: center;
 		}
 	}
 	@media (max-width: 420px) {
@@ -128,4 +138,5 @@ const StyledP = styled(motion.p)`
 	font-family: 'Poppins', sans-serif;
 	color: #4d4d4d;
 	font-weight: medium;
+	margin: 0.8em auto;
 `;

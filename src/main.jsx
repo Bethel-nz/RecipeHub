@@ -6,6 +6,8 @@ import About from './pages/About/About';
 import RecipeDetails from './pages/Recipes/RecipeDetails/RecipeDetails';
 import RecipeLayout from './pages/Recipes/RecipeLayout';
 import Recipes from './pages/Recipes/Recipes';
+import SearchRecipes from './pages/Recipes/SearchedRecipes/SearchRecipes';
+import SearchedContent from './pages/Recipes/SearchedRecipes/SearchedContent';
 import { GlobalStyle } from './styles/GlobalStyles';
 
 const router = createBrowserRouter([
@@ -25,6 +27,16 @@ const router = createBrowserRouter([
 					{
 						path: ':recipeId',
 						element: <RecipeDetails />,
+					},
+				],
+			},
+			{
+				path: 'search',
+				element: <SearchRecipes />,
+				children: [
+					{
+						path: ':searched',
+						element: <SearchedContent />,
 					},
 				],
 			},

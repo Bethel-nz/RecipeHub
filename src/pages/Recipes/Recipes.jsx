@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import styled from 'styled-components';
 import RecipeContent from './Components/RecipeContent';
+import SearchRecipes from './SearchedRecipes/SearchRecipes';
 
 String.prototype.capitalizeFirstLetter = function () {
 	return this.charAt(0).toUpperCase() + this.slice(1);
@@ -55,6 +56,7 @@ export default function App() {
 					</Button>
 				))}
 			</Wrapper>
+			<SearchRecipes />
 			<div className='container'>
 				<RecipeContent tags={content} />
 			</div>
@@ -74,6 +76,27 @@ const Wrapper = styled.div`
 		display: flex;
 		justify-content: center;
 		align-items: center;
+	}
+
+	.form {
+		width: 20em;
+		position: relative;
+	}
+	.form input {
+		width: 100%;
+		padding: 0.8em;
+		padding-left: 2.5em;
+		outline: transparent;
+		border: none;
+		border-radius: 0.5em;
+		font-size: 1.2em;
+	}
+
+	.form .icon {
+		position: absolute;
+		padding-inline: 0.5em;
+		top: 58%;
+		transform: translateY(-50%);
 	}
 
 	@media (max-width: 768px) {

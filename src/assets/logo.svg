@@ -1,4 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-  <circle cx="12" cy="12" r="10" />
+  <path d="M12 22c-5 0-9-3-9-8v-4c0-5 4-8 9-8s9 3 9 8v4c0 5-4 8-9 8z" />
+  <path d="M10 22h4" />
+  <path d="M12 2v4" />
+  <path d="M9 7h6" />
+  <path d="M12 10c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM16 21c0 1.657-1.343 3-3 3s-3-1.343-3-3" />
   <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="12" fill="currentColor">RecipeHub</text>
 </svg>

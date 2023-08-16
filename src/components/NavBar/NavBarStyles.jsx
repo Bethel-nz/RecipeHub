@@ -2,7 +2,7 @@ import styled, { keyframes } from 'styled-components';
 
 const slideDown = keyframes`
 from {
-	transform: translateY(-100%);
+	transform: translateY(-50%);
 } to{
 	transform: translateY(0);
 }`;
@@ -55,14 +55,12 @@ export const Nav = styled.nav`
 	@media (max-width: 1280px) {
 		max-width: 950px;
 	}
-	@media (max-width: 1100px) {
-		max-width: 850px;
-	}
+	
 	@media (max-width: 900px) {
 		max-width: 720px;
 	}
 	@media (max-width: 720px) {
-		max-width: 680px;
+		max-width: 480px;
 		ul {
 			display: none;
 		}
@@ -83,7 +81,7 @@ export const Nav = styled.nav`
 			padding-bottom: 0.5em;
 			margin: auto;
 			animation: ${slideDown} 0.3s ease-out forwards;
-			transform: translateY(-100%);
+			transform: translateY(-80%);
 			background-color: white;
 			border: 0.2em solid #bef09d;
 			border-radius: 0.5em;

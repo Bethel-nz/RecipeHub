@@ -39,7 +39,7 @@ const RecipeDetails = () => {
 							<p>Preparation Time:</p>
 							<span>
 								{data?.preparationMinutes === -1 ? (
-									'Cook till perfection'
+									'cook till satisfied'
 								) : (
 									<span>{data?.preparationMinutes + ' ' + 'Minutes'}</span>
 								)}
@@ -56,8 +56,8 @@ const RecipeDetails = () => {
 								<h2>Ingredients</h2>
 							</p>
 							<ul>
-								{data?.extendedIngredients?.map((ingredient) => (
-									<li>{ingredient?.original}</li>
+								{data?.extendedIngredients?.map((ingredient, idx) => (
+									<li key={idx}>{ingredient?.original}</li>
 								))}
 							</ul>
 						</div>
@@ -90,8 +90,7 @@ const Wrapper = styled.div`
 	/* border: 1px solid #9996967d; */
 	@media (max-width: 420px) {
 		img {
-			max-width: 100%;
-			width: 17em;
+			width: 18em;
 		}
 	}
 	color: #333333e2;
@@ -110,6 +109,7 @@ const Wrapper = styled.div`
 	}
 	.dish-type {
 		margin: 0;
+		width: auto;
 		display: flex;
 		align-items: center;
 		padding-block: 0.4em;
@@ -118,9 +118,9 @@ const Wrapper = styled.div`
 		}
 		ul,
 		li {
-			display: inline-flex;
+			display: flex;
 			list-style-type: none;
-			padding-inline: 0.3em;
+			padding-inline: 0.2em;
 			align-self: center;
 		}
 	}
@@ -147,7 +147,6 @@ const Wrapper = styled.div`
 			outline: transparent;
 			background-color: transparent;
 			border: none;
-			margin-left: 1.8em;
 			border-radius: 100%;
 			align-self: center;
 		}
@@ -156,8 +155,6 @@ const Wrapper = styled.div`
 		display: flex;
 		flex-wrap: wrap;
 		width: 100%;
-		padding: 1.8em;
-		box-shadow: 0px 0px 10px 1px rgba(17, 17, 26, 0.18);
 		border-radius: 0.5em;
 	}
 	.left-content {
@@ -166,6 +163,8 @@ const Wrapper = styled.div`
 		.image-container {
 			width: 400px;
 			img {
+				object-fit: cover;
+				max-width: 100%;
 				border-radius: 0.5em;
 				box-shadow: 0px 0px 10px 1px rgba(17, 17, 26, 0.18);
 			}
@@ -202,9 +201,8 @@ const Wrapper = styled.div`
 	}
 	.similar {
 		margin: 1.5em;
-		height: 24em;
 		padding: 0.5em;
-		box-shadow: 0px 0px 10px 1px rgba(17, 17, 26, 0.18);
+		box-shadow: 0px 0px 10px 1px rgba(125, 125, 133, 0.18);
 		border-radius: 0.5em;
 		p {
 			padding: 0.5em;
